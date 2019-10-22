@@ -71,11 +71,11 @@ class Draсo extends Tamagochi {
   //These are the functions to fire/fly with the Draсo
 
   fire() {
-    this.foodLevel += 30;
+    this.fireLevel += 30;
   }
 
   fly() {
-    this.sleepLevel += 20;
+    this.flyLevel += 20;
   }
 
   didDracoRanAway() {
