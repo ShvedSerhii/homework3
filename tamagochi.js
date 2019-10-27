@@ -131,57 +131,37 @@ setInterval(() => {
 
 let tId
 
-food.onclick = () => {
-  draco.food()
+function updateImage(imgUrl) {
   clearInterval(timerId)
   updateLevels()
   clearTimeout(tId)
-  document.getElementById("dracoImg").src = "img/food.png"
+  document.getElementById("dracoImg").src = imgUrl
   tId = setTimeout(() => {
     document.getElementById("dracoImg").src = "img/draco.png"
   }, 3000)
+}
+
+food.onclick = () => {
+  draco.food()
+  updateImage("img/food.png")
 }
 
 sleep.onclick = () => {
   draco.sleep()
-  clearInterval(timerId)
-  updateLevels()
-  clearTimeout(tId)
-  document.getElementById("dracoImg").src = "img/sleep.png"
-  tId = setTimeout(() => {
-    document.getElementById("dracoImg").src = "img/draco.png"
-  }, 3000)
+  updateImage("img/sleep.png")
 }
 
 play.onclick = () => {
   draco.play()
-  clearInterval(timerId)
-  updateLevels()
-  clearTimeout(tId)
-  document.getElementById("dracoImg").src = "img/play.jpg"
-  tId = setTimeout(() => {
-    document.getElementById("dracoImg").src = "img/draco.png"
-  }, 3000)
+  updateImage("img/play.jpg")
 }
 
 fire.onclick = () => {
   draco.fire()
-  clearInterval(timerId)
-  updateLevels()
-  clearTimeout(tId)
-  document.getElementById("dracoImg").src = "img/fire.jpg"
-  tId = setTimeout(() => {
-    document.getElementById("dracoImg").src = "img/draco.png"
-  }, 3000)
+  updateImage("img/fire.jpg")
 }
 
 fly.onclick = () => {
   draco.fly()
-  clearInterval(timerId)
-  updateLevels()
-  clearTimeout(tId)
-  document.getElementById("dracoImg").src = "img/fly.png"
-  tId = setTimeout(() => {
-    document.getElementById("dracoImg").src = "img/draco.png"
-  }, 3000)
+  updateImage("img/fly.png")
 }
